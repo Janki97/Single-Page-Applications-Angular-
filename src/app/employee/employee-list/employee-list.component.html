@@ -1,0 +1,67 @@
+<div class="container-fluid">
+<div class='card'>
+    <div class='card-header'>
+      {{pageTitle}}
+    </div>
+    <div class='card-body'>
+      <div class='row'>
+        <div class='col-md-4'>
+          <label>Filter by:</label> &nbsp;
+          <input type="text" [(ngModel)]="searchValue">
+        </div>
+      </div>
+
+<div class='table-responsive'>
+    <table class='table'>
+      <thead *ngIf="!employee || employee.length !== 0 ">
+       
+          <th>
+            <button class='btn btn-primary'
+                    (click)='toggleImage()'>
+              {{showImage ? 'Hide' : 'Show'}} Image
+            </button>
+          </th>
+          <th>EmployeeName</th>
+          <th>EmployeeName With ID</th>
+          <th>Employeecode</th>
+          <th>JoingDate</th>
+          <th>department</th>
+          <th>salary</th>
+          <th>feedback</th>
+      
+      </thead>
+      <tbody>
+        <ng-container *ngIf="employee">
+            <tr *ngFor="let emp of employee | dateRange : searchValue ">
+              <td>
+                <img *ngIf='showImage'
+                     [src]='emp.imageUrl'
+                     [title]='emp.employeeName'
+                     [style.width.px]='imageWidth'
+                     [style.margin.px]='imageMargin'>
+              </td>
+                <td> {{emp.employeeName}} </td>
+                <td>
+                <a [routerLink]="['/employee', emp.employeeID]">
+                  {{ emp.employeeName }}
+                </a>
+               </td>
+                <td> {{emp.employeecode}} </td>
+                <td> {{emp.JoingDate | date }} </td>
+                <td> {{emp.department}} </td>
+                <td> {{emp.salary | currency:'INR'}} </td>
+                <td>
+                    <app-feedback [feedback]='emp.starRating' >
+                    </app-feedback>
+               </td>
+                
+            </tr>
+            <tr *ngIf="!employee || employee.length === 0">
+                <td> No employees found </td>
+            </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

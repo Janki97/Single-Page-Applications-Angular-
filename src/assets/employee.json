@@ -1,0 +1,53 @@
+ 
+   [
+    {
+      "employeeID":1,
+      "employeeName": "Janki Patel",
+      "employeecode": "emp1",
+      "JoingDate": "Aug 04, 2020",
+      "department": "Development",
+      "salary": 15000,
+      "starRating":4.8,
+      "imageUrl": "../assets/img/user2.png"
+    },
+    {
+      "employeeID": 2,
+      "employeeName": "Tiger Nixon",
+      "employeecode": "emp2",
+      "JoingDate": "March 19, 2019",
+      "department": "Testing",
+      "salary": 25000,
+      "starRating": 3.2,
+      "imageUrl": "../assets/img/user2.png"
+    },
+    {
+      "employeeID": 3,
+      "employeeName": "Joe ",
+      "employeecode": "emp3",
+      "JoingDate": "March 29, 2019",
+      "department": "Cloud",
+      "salary": 20000,
+      "starRating":4.8,
+      "imageUrl": "../assets/img/user2.png"
+    },
+    {
+      "employeeID": 4,
+      "employeeName": "Bob",
+      "employeecode": "emp4",
+      "JoingDate": "March 9, 2019",
+      "department": "development",
+      "salary": 30000,
+      "starRating":4.8,
+      "imageUrl": "../assets/img/user2.png"
+    },
+    {
+      "employeeID": 5,
+      "employeeName": "ABC",
+      "employeecode": "emp5",
+      "JoingDate": "March 19, 2019",
+      "department": "QA",
+      "salary": 17000,
+      "starRating": 3.2,
+      "imageUrl": "../assets/img/user2.png"
+    }
+  ]

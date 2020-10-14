@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+div.card-header {
+    font-size: large;
+   }
+   
+   div.card {
+     margin-top: 50px
+   }
+   
+   .table {
+     margin-top: 20px
+   }
+    .row{
+    margin: 0;
+    padding: 14px;
+}
